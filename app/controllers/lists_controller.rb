@@ -13,6 +13,8 @@ class ListsController < ApplicationController
   end
 
   def create
+    @list = List.new(params[:list])
+    @list.save # Will raise ActiveModel::ForbiddenAttributesError
   end
 
 
